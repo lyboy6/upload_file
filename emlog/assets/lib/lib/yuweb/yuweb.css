@@ -1,0 +1,318 @@
+@font-face {
+  font-family: 'yuweb'; /* Project id 4272153 */
+  src: url('//at.alicdn.com/t/c/font_4272153_ztyfac4sdbe.woff2?t=1696246136101')
+      format('woff2'),
+    url('//at.alicdn.com/t/c/font_4272153_ztyfac4sdbe.woff?t=1696246136101')
+      format('woff'),
+    url('//at.alicdn.com/t/c/font_4272153_ztyfac4sdbe.ttf?t=1696246136101')
+      format('truetype');
+}
+
+.yuweb {
+  font-family: 'yuweb' !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-loading:before {
+  content: '\e83d';
+}
+
+.icon-guanbi:before {
+  content: '\e64a';
+}
+
+/* 
+  yuweb css 
+*/
+html {
+  --primary_color: #409eff;
+  --success_color: #67c23a;
+  --warning_color: #e6a23c;
+  --info_color: #909399;
+  --danger_color: #f56c6c;
+  --border_color: #dcdfe6;
+  --text_default_color: #606266;
+  --theme-color: #fb6c28;
+}
+.scroll_hide {
+  height: 100vh;
+  overflow-y: hidden;
+}
+.yu_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid var(--border_color);
+  color: var(--text_default_color);
+  border-radius: 6px;
+  user-select: none;
+  font-family: 'yufont';
+}
+
+.yu_button:active {
+  opacity: 0.7;
+}
+.yu_button.loading {
+  opacity: 0.7;
+}
+.yu_button.loading::before {
+  content: '\e634';
+  color: #fff;
+  margin-right: 4px;
+  animation: rotating 2.5s linear infinite;
+}
+
+.yu_button_primary {
+  background-color: var(--primary_color);
+  border: 1px solid var(--primary_color);
+  color: #fff;
+}
+.yu_button_primary:hover {
+  background-color: var(--primary_color);
+  border: 1px solid var(--primary_color);
+  color: #fff;
+}
+.yu_button_success {
+  background-color: var(--success_color);
+  color: #fff;
+}
+.yu_button_success:hover {
+  background-color: var(--success_color);
+  border: 1px solid var(--success_color);
+  color: #fff;
+}
+
+.yu_button_warning {
+  background-color: var(--warning_color);
+  border: 1px solid var(--warning_color);
+  color: #fff;
+}
+.yu_button_warning:hover {
+  background-color: var(--warning_color);
+  border: 1px solid var(--warning_color);
+  color: #fff;
+}
+
+.yu_button_info {
+  background-color: var(--info_color);
+  border: 1px solid var(--info_color);
+  color: #fff;
+}
+.yu_button_info:hover {
+  background-color: var(--info_color);
+  border: 1px solid var(--info_color);
+  color: #fff;
+}
+.yu_button_danger {
+  background-color: var(--danger_color);
+  border: 1px solid var(--danger_color);
+  color: #fff;
+}
+.yu_button_danger:hover {
+  background-color: var(--danger_color);
+  border: 1px solid var(--danger_color);
+  color: #fff;
+}
+
+.yu_button_theme {
+  background-color: var(--theme-color);
+  border: 1px solid var(--theme-color);
+  color: #fff;
+}
+.yu_button_theme:hover {
+  background-color: var(--theme-color);
+  border: 1px solid var(--theme-color);
+  color: #fff;
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.yu_overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.yu_dialog_content {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  background-color: #fff;
+  border-radius: 3px;
+  z-index: 9999;
+}
+.yu_dialog_content .yu_dialog_header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary_color);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 3px 3px 0 0;
+  cursor: pointer;
+}
+
+.yu_dialog_content—body {
+  padding: 15px;
+}
+.yu_dialog_footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px;
+}
+.yu_dialog_footer > button {
+  margin: 0 20px;
+}
+.hide {
+  display: none;
+}
+.yu_select {
+  width: 100%;
+  outline: none;
+  height: 100%;
+  border: none;
+}
+
+.yu_select option {
+  font-size: 16px;
+}
+/* yublog_switch */
+
+input[type='checkbox'].yublog_switch {
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  width: 48px;
+  height: 22px;
+  background: #ccc;
+  border-radius: 10px;
+  transition: border-color 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+
+input[type='checkbox'].yublog_switch::after {
+  content: '';
+  display: inline-block;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0, 0, 2px, #999;
+  transition: 0.4s;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  left: 2px;
+}
+
+input[type='checkbox'].yublog_switch:checked {
+  background: #1890ff;
+}
+
+input[type='checkbox'].yublog_switch:checked::after {
+  content: '';
+  position: absolute;
+  left: 55%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.yu_form_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.yu_form_item {
+  flex-shrink: 0;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.yu_form_item .yu_label {
+  width: 100px;
+  margin-right: 6px;
+  text-align: right;
+}
+.yu_input,
+.yu_textarea {
+  width: 100%;
+  height: 44px;
+  border: 1px solid #dfdfdf;
+  border-radius: 4px;
+  position: relative;
+}
+
+.yu_input.active {
+  border: 1px solid var(--theme-color);
+}
+.yu_textarea.active {
+  border: 1px solid var(--theme-color);
+}
+.yu_input,
+.yu_textarea {
+  height: 38px;
+  border: 1px solid #dfdfdf;
+  border-radius: 4px;
+}
+
+.yu_input.active {
+  border: 1px solid var(--theme-color);
+}
+
+.yu_input input {
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+  border-radius: 4px;
+}
+.yu_input input::placeholder {
+  font-size: 12px;
+}
+.yu_textarea {
+  height: auto;
+  padding: 4px;
+  font-size: 14px;
+}
+.yu_textarea textarea {
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+  border-radius: 4px;
+  resize: none;
+}
+
+.yu_input_icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: var(--theme-color);
+  cursor: pointer;
+}
+.getimg_code .yu_input_icon {
+  height: 90%;
+}

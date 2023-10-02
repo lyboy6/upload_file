@@ -1,0 +1,101 @@
+.yublog_user_main {
+  width: 200px;
+  margin-right: 10px;
+}
+
+.yublog_user_page {
+  flex: 1;
+}
+
+.sidebar-menu {
+  position: sticky;
+  top: 70px;
+  background-color: #fff;
+  border-radius: 4px;
+  font-size: 15px;
+  height: 600px;
+  overflow-y: auto;
+}
+
+.menu-list li a {
+  padding: 10px 12px;
+  display: block;
+  text-align: center;
+}
+
+.menu-list li.active a {
+  background: #1890ff;
+  color: #ffffff;
+  border-radius: 4px;
+}
+.menu-list li {
+  padding: 6px 15px;
+}
+
+.seting_container {
+  background-color: #fff;
+  padding: 15px;
+}
+
+.seting_item_input {
+  margin-top: 10px;
+}
+.yublog_input {
+  margin-top: 5px;
+}
+
+.seting_item .seting_button {
+  padding: 10px 15px;
+}
+
+.user_form_item {
+  display: none;
+}
+.user_form_item.show {
+  display: block;
+}
+
+.yublog_user_page .user_form_item:nth-child(1) {
+  display: block;
+}
+
+.seting_item_input .desc {
+  height: 88px;
+}
+.user_info {
+  display: flex;
+}
+
+.user_info .user_name {
+  font-size: 24px;
+  color: var(--theme-color);
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 500;
+  text-shadow: 1px 1px 8px var(--theme-color);
+}
+.user_info .info {
+  font-size: 14px;
+  color: #999;
+}
+.user_info .yublog_avatar img {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user_button {
+  padding: 6px 20px;
+}
+
+.mailcode {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  cursor: pointer;
+  color: var(--theme-color);
+}
